@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.aboutme_page {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.aboutme_page {
+    align-self: center;
+    text-align: center;
+}
+
+.aboutme p {
+    font-weight: 600;
+}
+
+.aboutme_text {
+    text-align: center;
+}
+
+.aboutme_text3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.aboutme_text2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper .static-txt { /* "I'm" */
+    color: #fff;
+    text-shadow: 1px 1px 4px #000;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-txts { /* "Anthony Chan" */
+    margin-left: 15px;
+    line-height: 90px;
+    height: 90px;
+}
+
+.dynamic-txts li{
+    list-style: none;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 500;
+    top: 0;
+    position: relative;
+}
+
+.dynamic-txts li::after {
+    position: relative;
+}
+
+.dynamic-txts li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #004225;
+    border-left: 2px solid #000;
+    animation: typing 3s steps(12) infinite;
+}
+
+@keyframes typing{
+    40%, 60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+.socials .socialsbutton {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.socials .socialsbutton:hover {
+    width: 200px;
+}
+
+
+.socials .socialsbutton .socialsicon {
+    display: inline-block;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.socials .socialsbutton:nth-child(1):hover .socialsicon {
+    background: #4267b2 ;
+}
+
+.socials .socialsbutton:nth-child(2):hover .socialsicon {
+    background: #1da1fe;
+}
+
+.socials .socialsbutton:nth-child(3):hover .socialsicon {
+    background: #c32aa3;
+}
+
+.socials .socialsbutton:nth-child(4):hover .socialsicon {
+    background: #ff0000;
+}
+
+.socials .socialsbutton:nth-child(5):hover .socialsicon {
+    background: #0082ca;
+}
+
+.socials .socialsbutton .socialsicon i {
+    font-size: 25px;
+    line-height: 60px;
+}
+.socials .socialsbutton:hover .socialsicon i {
+    color: #fff
+}
+
+.socials .socialsbutton span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+}
+
+.socials .socialsbutton:nth-child(1) span {
+    color: #4267b2;
+}
+
+.socials .socialsbutton:nth-child(2) span {
+    color: #1da1fe;
+}
+
+.socials .socialsbutton:nth-child(3) span {
+    color: #c32aa3;
+}
+
+.socials .socialsbutton:nth-child(4) span {
+    color: #ff0000;
+}
+
+.socials .socialsbutton:nth-child(5) span {
+    color: #0082ca;
+}
+
+h1 {
+    color: #ffff;
+    text-shadow: 1px 1px 4px #000;
+}
+.one {
+    background-color: #004225;
+}
+
+.aboutme {
+    background-color: #003B21;
+}
+
+.three {
+    background-color: #00351E;
+}
+
+.four {
+    background-color: #002E1A;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+.gallery img {
+    max-width: 100%;
+    height: 265px;
+}
